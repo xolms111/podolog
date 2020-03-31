@@ -26,7 +26,11 @@ body {
     padding: 0;
     line-height: 1.5;
     margin: 0;
+    overflow-x: hidden;
     font-family: 'Ubuntu', sans-serif;
+    &.hidden {
+        overflow-y: hidden;
+    }
 }
 
 * {
@@ -72,4 +76,26 @@ ul {
 
 .sprites {
     display: none;
+}
+
+.title {
+    font-size: em(51);
+    color: #03475e;
+    font-weight: 400;
+    margin-bottom: 5px;
+    &__desc {
+        font-size: em(28);
+        color: #03475e;
+        font-weight: 300;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: em(28);
+        &__desc {
+            font-size: em(18);
+        }
+    }
 }

@@ -1,0 +1,40 @@
+.service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5vh 0 2vh;
+    &__item {
+        position: relative;
+        flex-basis: 28%;
+        margin-bottom: 7vh;
+        a {
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+        &_button {
+            a {
+                display: inline-block;
+            }
+        }
+    }
+    &__image {
+        max-width: 100%;
+        width: auto;
+        vertical-align: top;
+    }
+    &__title {
+        position: absolute;
+        bottom: 0%;
+        right: 0;
+        width: 75%;
+        h3 {
+            font-size: em(24);
+            font-weight: 300;
+            color: #03475e;
+            transition: all .5s;
+            line-height: 1.2;
+        }
+    }
+}

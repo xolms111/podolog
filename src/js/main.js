@@ -13,6 +13,7 @@ const burger = {
     bindUIactions: () => {
         burger.el.ham.on(`click`, (event) => {
             burger.activateMenu()
+            main.bodyHiden()
             event.preventDefault()
         })
     },
@@ -50,19 +51,28 @@ const modal = {
     },
     showModal: () => {
         modal.el.button.click((e) => {
+            e.preventDefault()
             modal.el.main.fadeIn()
+            main.bodyHiden()
+            return false
         })
     },
     clickNoWrap: () => {
         $(modal.el.main).click((event) => {
             if (!modal.el.content.is(event.target) && modal.el.content.has(event.target).length === 0) {
                 modal.el.main.fadeOut()
+                main.bodyHiden()
             }
         })
     },
     init: () => {
         modal.showModal()
         modal.clickNoWrap()
+    }
+}
+const main = {
+    bodyHiden: () => {
+        $(`body`).toggleClass(`hidden`)
     }
 }
 $(document).ready(() => {

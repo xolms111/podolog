@@ -1,0 +1,20 @@
+mixin service-item(text, image, modal) 
+    .service__item 
+        a(href=modal)
+            .service__image 
+                img(src=image alt=text)
+            .service__title
+                h3=text
+section.section.section_service#main_problem
+    .container
+        h2.title Основные проблемы
+        p.title__desc решаемые подологом
+    .container
+        .service
+            +service-item('Грибковые заболевания ногтей', '/img/service/1.jpg', '#gribkovye_zabolevaniya_nogtej')
+            +service-item('Трещины', '/img/service/2.jpg', '#treshchiny')
+            +service-item('Мозоли натоптыши', '/img/service/3.jpg', '#mozoli_natoptyshi')
+            +service-item('Вросшие ногти', '/img/service/4.jpg', '#vrosshie_nogti')
+            +service-item('Деформированные ногти', '/img/service/5.jpg', '#deformirovannye_nogti')
+            .service__item.service__item_button
+                a(href="#" class="button button_full button_border-orange button_text-white modal-show button_orange") Записаться на прием
