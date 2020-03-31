@@ -1,0 +1,31 @@
+.section {
+    padding: 8vh 0;
+    &_podologia {
+        position: relative;
+        display: block;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-repeat: no-repeat;
+            background-image: url(../img/podologia_top.png);
+            background-size: 50% 100%;
+            background-position: top left;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background-repeat: no-repeat;
+            background-image: url(../img/podologia_bottom.png);
+            background-size: 50% 100%;
+            background-position: top right;
+        }
+    }
+}

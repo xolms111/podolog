@@ -1,0 +1,19 @@
+// Mobile first
+
+@function rem($px) {
+    @return ($px / 16)+rem;
+}
+
+@function em($px) {
+    @return ($px / 16)+em;
+}
+
+$mediaWidthMobile: 320px;
+$mediaWidthTablet: 768px;
+$mediaWidthTabletHorizontal: 1024px;
+$mediaWidthLaptop: 1366px;
+
+$white: #fff;
+$blue: #03475e;
+$orange: #FF6600;
+$grey: #575757;

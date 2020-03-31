@@ -1,0 +1,43 @@
+//Меню начало
+mixin menu-link(link, text)
+    li.menu__item
+        a(href=link class="menu__link")=text
+nav.menu
+    .menu__container
+        .menu__top
+            .container
+                .wrapper.wrapper_jcsb.wrapper_aic
+                    .menu__left
+                        .menu__logo
+                            .logo
+                                a(href="/")
+                                    svg 
+                                        use(xlink:href="#logo")
+                        .menu__text
+                            p
+                                |Подолог в Севастополе
+                                br 
+                                |Александра Лустина
+                    .menu__right
+                        .menu__callback
+                            a(href="tel:‎89780538620" class="menu__phone") ‎8 (978) 053 86 20
+                            .menu__messangers
+                                a(class="menu__social menu__social_dark  menu__social_viber" href="viber://chat?number=+79780538620")
+                                    svg 
+                                        use(xlink:href="#viber")
+                                a(class="menu__social menu__social_dark menu__social_whatsapp" href="https://api.whatsapp.com/send?phone=79780538620")
+                                    svg 
+                                        use(xlink:href="#whats")
+                        .menu__burger
+                            +burger('dark')
+        .menu__center
+            .container
+                ul.menu__list
+                    +menu-link('#what_is_podology', 'Что такое подология?')
+                    +menu-link('#main_problem', 'Основные проблемы')
+                    +menu-link('#equipment', 'Оборудование')
+                    +menu-link('#certificates', 'Сертификаты')
+                    +menu-link('#price_of_the_nail_service', 'Прайс ногтевого сервиса')
+                    +menu-link('#podologist_price_list', 'Прайс подолога')
+                    +menu-link('#contacts', 'Контакты')
+//Меню конец

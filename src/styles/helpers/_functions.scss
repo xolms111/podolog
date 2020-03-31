@@ -1,7 +1,0 @@
-@function rem($px) {
-    @return ($px / 16)+rem;
-}
-
-@function em($px) {
-    @return ($px / 16)+em;
-}

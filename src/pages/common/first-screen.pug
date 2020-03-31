@@ -1,0 +1,42 @@
+//Первый экран
+.first-screen(style="background-image: url(img/first-bg.jpg);")
+    .first-screen__triangle
+    .first-screen__container
+        .first-screen__top
+            .container
+                .wrapper.wrapper_jcsb.wrapper_aic
+                    .first-screen__left
+                        .first-screen__logo
+                            .logo
+                                a(href="/")
+                                    svg
+                                        use(xlink:href="#logo")
+                        .first-screen__text
+                            p
+                                |Подолог в Севастополе
+                                br 
+                                |Александра Лустина
+                    .first-screen__right
+                        .first-screen__callback
+                            a(href="tel:‎89780538620" class="first-screen__phone") ‎8 (978) 053 86 20
+                            .first-screen__messangers
+                                a(class="first-screen__social first-screen__social_white  first-screen__social_viber" href="viber://chat?number=+79780538620")
+                                    svg 
+                                        use(xlink:href="#viber")
+                                a(class="first-screen__social first-screen__social_white first-screen__social_whatsapp" href="https://api.whatsapp.com/send?phone=79780538620")
+                                    svg
+                                        use(xlink:href="#whats")
+                        .first-screen__burger
+                            +burger('white')
+        .first-screen__content
+            .container
+                .wrapper.wrapper_jcsb.wrapper_aifs
+                    .first-screen__center
+                        include ../components/carousel
+                    .first-screen__button
+                        a(href="#" class="button button_empty button_border-orange button_text-white modal-show") Записаться на прием
+        .first-screen__footer
+            .container
+                .wrapper.wrapper_jcfe
+                    .dots
+//Первый экран конец

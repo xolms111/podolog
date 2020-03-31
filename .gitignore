@@ -1,16 +1,16 @@
+# Файлы и папки операционной системы
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-.idea
-.vscode
-.github
-.env
-ehthumbs.db
 Thumbs.db
-_config.yml
-node_modules
-dist
-yarn.lock
-package-lock.json
+
+# Файлы редактора
+.idea
+*.sublime*
+.vscode
+
+# Вспомогательные файлы
+*.log*
+node_modules/
+reports/
+
+# Папка с собранными файлами проекта
+# build/

@@ -1,0 +1,75 @@
+@import "../../local_modules/normalize.css/normalize";
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-size: 16px;
+    padding: 0;
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1190px;
+    padding: 0 10px;
+    width: 100%;
+    margin: 0 auto;
+    &_small {
+        max-width: 940px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    &_jcsb {
+        justify-content: space-between;
+    }
+    &_aic {
+        align-items: center;
+    }
+    &_jcfe {
+        justify-content: flex-end;
+    }
+    &_aifs {
+        align-items: flex-start;
+    }
+}
+
+.sprites {
+    display: none;
+}
