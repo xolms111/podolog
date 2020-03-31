@@ -5,6 +5,24 @@ mixin service-item(text, image, modal)
                 img(src=image alt=text)
             .service__title
                 h3=text
+mixin service-modal(images, title, link)
+    .service__modal.modal(id=link)
+        .modal__wrapper
+            .modal__content
+                h2=title
+                .service__slider
+                .service__footer
+                    .service__left
+                    .service__right
+                        .service__text
+                            p Всего за три сеанса, Вы перестанете чуствовать дискомфорт и боль в области ногтя
+                            p 
+                                b Запишитесь на прием к подологу и начните жить в комфорте
+                        .service__button
+                            a(href="#" class="button button_full button_border-orange button_text-white modal-show button_orange") Записаться на прием
+                        .service__callback
+                            p Или звоните: 
+                                a(href="tel:+79780538620") 8 978 053 86 20
 section.section.section_service#main_problem
     .container
         h2.title Основные проблемы
@@ -18,3 +36,11 @@ section.section.section_service#main_problem
             +service-item('Деформированные ногти', '/img/service/5.jpg', '#deformirovannye_nogti')
             .service__item.service__item_button
                 a(href="#" class="button button_full button_border-orange button_text-white modal-show button_orange") Записаться на прием
++service-modal('', 'Грибковые заболевания ногтей', 'gribkovye_zabolevaniya_nogtej')
++service-modal('', 'Трещины', 'treshchiny')
++service-modal('', 'Мозоли натоптыши', 'mozoli_natoptyshi')
++service-modal('', 'Вросшие ногти', 'vrosshie_nogti')
++service-modal('', 'Деформированные', 'deformirovannye_nogti')
+
+
+

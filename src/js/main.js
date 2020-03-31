@@ -1,3 +1,4 @@
+/* eslint-disable no-invalid-this */
 const $ = jQuery
 const burger = {
     el: {
@@ -52,7 +53,7 @@ const modal = {
     showModal: () => {
         modal.el.button.click((e) => {
             e.preventDefault()
-            modal.el.main.fadeIn()
+            $(`.modal_main`).fadeIn()
             main.bodyHiden()
             return false
         })
@@ -61,7 +62,7 @@ const modal = {
         $(modal.el.main).click((event) => {
             if (!modal.el.content.is(event.target) && modal.el.content.has(event.target).length === 0) {
                 modal.el.main.fadeOut()
-                main.bodyHiden()
+                main.bodyShow()
             }
         })
     },
@@ -72,11 +73,32 @@ const modal = {
 }
 const main = {
     bodyHiden: () => {
-        $(`body`).toggleClass(`hidden`)
+        $(`body`).addClass(`hidden`)
+    },
+    bodyShow: () => {
+        $(`body`).removeClass(`hidden`)
+    }
+}
+const service = {
+    el: {
+        button: $(`.service__item a`)
+    },
+    showModal: () => {
+        service.el.button.click(function(e) {
+            e.preventDefault()
+            const href = $(this).attr(`href`)
+            $(href).fadeIn()
+            main.bodyHiden()
+            return false
+        })
+    },
+    init: () => {
+        service.showModal()
     }
 }
 $(document).ready(() => {
     burger.init()
     carousel.init()
     modal.init()
+    service.init()
 })

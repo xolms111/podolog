@@ -6,6 +6,7 @@
     cursor: pointer;
     padding: 1.5vh 5vh;
     transition: all .5s;
+    z-index: 3;
     &_empty {
         background-color: transparent;
         border: 2px solid;
