@@ -19,7 +19,7 @@
     "@babel/preset-env": "^7.8.3",
     "@htmlacademy/editorconfig-cli": "^1.0.0",
     "browser-sync": "^2.26.7",
-    "chrome-launcher": "^0.12.0",
+    "chrome-launcher": "^0.13.2",
     "del": "^5.1.0",
     "editorconfig-cli": "^0.3.0",
     "eslint": "^6.8.0",
